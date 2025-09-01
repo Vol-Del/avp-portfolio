@@ -1,0 +1,235 @@
+/* Base */
+* {
+    font-family: 'Korataki', serif;
+}
+body {
+    background: #000;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+header.scrolled {
+    background: rgba(203, 100, 44, 0.25);
+}
+
+nav.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ff8844;
+}
+
+/* --- Nav groups */
+.nav-left {
+    flex: 0;
+    margin-right: 1rem;
+}
+.nav-center {
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    display: flex;
+    gap: 0.6rem;
+}
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+.social-icons a:hover img {
+    transform: scale(1.15);
+    filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(330deg);
+}
+
+/* --- Language Dropdown --- */
+.lang-switcher details {
+    position: relative;
+}
+.flag {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.lang-dropdown {
+    position: absolute;
+    right: 0;
+    margin-top: 0.4rem;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.lang-dropdown li a img {
+    width: 22px;
+    height: 16px;
+}
+
+/* =========================
+   HERO BLOCK
+   ========================= */
+.hero-block {
+    position: relative;
+    background: url("../images/HeroBg.png") no-repeat center center/cover;
+    width: 100%;
+    padding: 4rem 1rem;
+    margin: 0;
+}
+.hero-block .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-content h1 {
+    font-size: 6rem;
+}
+
+/* =========================
+   BANNER CARD
+   ========================= */
+.banner-card {
+    max-width: 900px;
+    margin: 1.25rem auto 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(180deg,
+    rgba(78, 42, 26, 0.25) 0%,
+    rgba(129, 71, 33, 0.25) 50%,
+    rgba(187, 99, 39, 0.25) 100%
+    );
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* =========================
+   CARDS
+   ========================= */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.card {
+    flex: 1;
+    max-width: 350px;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(180deg,
+    rgba(78, 42, 26, 0.25) 0%,
+    rgba(129, 71, 33, 0.25) 50%,
+    rgba(187, 99, 39, 0.25) 100%
+    );
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.9;
+}
+.card h3 {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   WIKI BANNER
+   ========================= */
+.wiki-banner {
+    margin-top: 4rem;
+    background: #111;
+    padding: 3rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer.container {
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+    .nav-center {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.6rem;
+    }
+    .nav-right {
+        order: 2;
+    }
+}

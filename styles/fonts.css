@@ -1,0 +1,103 @@
+/* fonts.css */
+/* =========================
+   KORATAKI FONT FACES
+   ========================= */
+
+/* Regular */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Bold */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Bold Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+/* Book */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-Book.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+/* Book Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-BookItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+/* ExtraBold */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+/* ExtraBold Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+/* ExtraLight */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+/* ExtraLight Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+/* Light */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+/* Light Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+/* Italic (regular italic) */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+/* UltraLight */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-UltraLight.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+/* UltraLight Italic */
+@font-face {
+    font-family: 'Korataki';
+    src: url('fonts/Korataki-UltraLightItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}

@@ -2,74 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><!DOCTYPE html>
-        <html lang="en">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MoPortfolio</title>
+    <title>AVP Folio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Pico.css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
 <!-- Navbar -->
 <header>
-    <nav>
-        <ul>
+    <nav class="container-fluid">
+        <ul class="nav-left">
             <li><strong>AVP Folio</strong></li>
+        </ul>
+
+        <ul class="nav-center">
             <li><a href="#">Home</a></li>
             <li><a href="#">3D-Design</a></li>
             <li><a href="#">Web-Design</a></li>
             <li><a href="#">Skills</a></li>
             <li><a href="#">Showreel</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Boosternpack</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Wiki</a></li>
+        </ul>
+
+        <ul class="nav-right">
+            <!-- Social Icons -->
+            <li class="social-icons">
+                <a href="#"><img src="icons/patreon-icon.svg" alt="Patreon"></a>
+                <a href="#"><img src="icons/artstation-icon.svg" alt="ArtStation"></a>
+                <a href="#"><img src="icons/kofi-icon.svg" alt="Ko-fi"></a>
+                <a href="#"><img src="icons/youtube-icon.svg" alt="YouTube"></a>
+            </li>
+
+            <!-- Language Dropdown -->
+            <li class="lang-switcher">
+                <details role="list">
+                    <summary aria-haspopup="listbox">
+                        <img src="icons/flags/uk.png" alt="English" class="flag" data-lang="en">
+                    </summary>
+                    <ul role="listbox" class="lang-dropdown">
+                        <li><a href="#" data-lang="en"><img src="icons/flags/uk.png" alt="English" class="flag"></a></li>
+                        <li><a href="#" data-lang="ua"><img src="icons/flags/ua.png" alt="Ukrainian" class="flag"></a></li>
+                        <li><a href="#" data-lang="de"><img src="icons/flags/de.png" alt="Deutsch" class="flag"></a></li>
+                        <li><a href="#" data-lang="pl"><img src="icons/flags/pl.png" alt="Polski" class="flag"></a></li>
+                        <li><a href="#" data-lang="kr"><img src="icons/flags/kr.png" alt="Korean" class="flag"></a></li>
+                        <li><a href="#" data-lang="jp"><img src="icons/flags/jp.png" alt="Japanese" class="flag"></a></li>
+                    </ul>
+                </details>
+            </li>
         </ul>
     </nav>
 </header>
 
-<!-- Hero -->
-<section class="hero">
-    <h1>HOME</h1>
-    <p>Mopportfolio – Portfolio from Moritz Genenger</p>
-    <section class="banner-card">
-        <h2>VOLODYMYR ARTEMENKO</h2>
-    </section>
-</section>
+<!-- Hero Block -->
+<section class="hero-block">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+        <h1>HOME</h1>
+        <p>AVP Folio – Portfolio from Volodymyr Artemenko</p>
 
-<!-- Cards -->
-<section class="card-container">
-    <div class="card">
-        <span class="card-icon">🎨</span>
-        <h3>Graphic- and Webdesign</h3>
-        <p>Explore my work in creative digital design and modern web technologies.</p>
-    </div>
-    <div class="card">
-        <span class="card-icon">📖</span>
-        <h3>My Wiki and Blog</h3>
-        <p>Get free information and design-assets on my wiki!</p>
+        <article class="banner-card">
+            <h2>VOLODYMYR ARTEMENKO</h2>
+        </article>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🎨</span>
+                <h3>GRAPHIC- AND WEBDESIGN</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">📖</span>
+                <h3>MY WIKI AND BLOG</h3>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Portfolio Intro -->
-<section>
+<section class="container">
     <h2>Welcome to my Portfolio</h2>
     <p>My name is Moritz Genenger, and I am a versatile web developer and creative designer with extensive skills in modern web technologies and design tools.</p>
-    <button class="btn-accent">See More</button>
+    <button>See More</button>
 </section>
 
 <!-- Wiki Banner -->
 <section class="wiki-banner">
     <h2>Get Free Information and Design-Assets on my Wiki!</h2>
-    <button class="btn-accent" onclick="goToWiki()">To the Wiki</button>
+    <button onclick="goToWiki()">To the Wiki</button>
+</section>
+
+<section class="container">
+    <h2>WEB-DEVELOPMENT</h2>
+</section>
+
+<section class="container">
+    <h2>Design and creativity</h2>
+    <p>I am highly proficient with the entire Adobe Creative Cloud. Whether it’s Photoshop, Illustrator, or InDesign, I use these tools to create appealing and professional designs that are both visually impressive and functional.</p>
+</section>
+
+<section class="container">
+    <h2>3D-Design and Animation</h2>
+    <p>My skills in 3D programs like Blender enable me to create complex and realistic 3D models and animations. These abilities complement my portfolio and provide additional dimensions for creative projects.</p>
+    <p>Take a look at my work and feel free to contact me if you have any questions or would like to discuss a project. I look forward to bringing your ideas to life together!</p>
 </section>
 
 <!-- Footer -->
-<footer>
-    <div class="footer-grid">
+<footer class="container">
+    <div class="grid">
         <div>
             <strong>AVP Folio</strong>
         </div>
@@ -85,16 +128,8 @@
             <p><a href="#">Cookie Policy (EU)</a></p>
         </div>
     </div>
-    <p style="margin-top:1rem;">🌍 Deutsch | 🇬🇧 English</p>
 </footer>
 
-<!-- Custom JS -->
 <script src="script.js"></script>
-</body>
-</html>
-</title>
-</head>
-<body>
-
 </body>
 </html>
