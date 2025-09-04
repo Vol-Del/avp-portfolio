@@ -208,9 +208,26 @@ nav ul li a:hover {
    WIKI BANNER
    ========================= */
 .wiki-banner {
-    margin: 0rem;
-    background: #111;
-    padding: 3rem;
+    margin: 0;
+    height: 32rem;
+    /* Parallax effect */
+    background: url("../images/wikiParalax.jpg") no-repeat fixed center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Stick content to bottom */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.wiki-banner h2 {
+    margin: 0 0 1rem 0; /* Add spacing before button */
+    font-size: 2rem;
+}
+
+.wiki-banner button {
+    margin-bottom: 1rem; /* Keep space from bottom edge */
 }
 
 /* =========================
@@ -258,6 +275,54 @@ footer.container {
     justify-content: center;
 }
 .portfolio-intro .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+}
+
+.portfolio-intro .intro-image img:hover {
+    content: url("../images/about_me_hover.png"); /* your alternative image */
+}
+
+
+/* =========================
+   PORTFOLIO WEB INTRO
+   ========================= */
+.portfolio-web {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0;
+    text-align: left;
+
+    width: 100%;
+    padding: 3rem 2rem;
+    background: linear-gradient(
+            180deg,
+            #231a1f 0%,
+            #7a3226 100%
+    );
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.portfolio-web .intro-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.portfolio-web .intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-web .intro-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -326,6 +391,13 @@ footer.container {
     }
     .portfolio-intro .intro-text,
     .portfolio-3d .intro-text {
+        text-align: center;
+    }
+    .portfolio-web {
+        flex-direction: column;
+        text-align: center;
+    }
+    .portfolio-web .intro-text {
         text-align: center;
     }
 }
