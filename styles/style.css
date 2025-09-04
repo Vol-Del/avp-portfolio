@@ -1,4 +1,6 @@
-/* Base */
+/* =========================
+   BASE
+   ========================= */
 * {
     font-family: 'Korataki', serif;
 }
@@ -145,10 +147,11 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
-    background: linear-gradient(180deg,
-    rgba(78, 42, 26, 0.25) 0%,
-    rgba(129, 71, 33, 0.25) 50%,
-    rgba(187, 99, 39, 0.25) 100%
+    background: linear-gradient(
+            180deg,
+            rgba(78, 42, 26, 0.25) 0%,
+            rgba(129, 71, 33, 0.25) 50%,
+            rgba(187, 99, 39, 0.25) 100%
     );
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -174,10 +177,11 @@ nav ul li a:hover {
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    background: linear-gradient(180deg,
-    rgba(78, 42, 26, 0.25) 0%,
-    rgba(129, 71, 33, 0.25) 50%,
-    rgba(187, 99, 39, 0.25) 100%
+    background: linear-gradient(
+            180deg,
+            rgba(78, 42, 26, 0.25) 0%,
+            rgba(129, 71, 33, 0.25) 50%,
+            rgba(187, 99, 39, 0.25) 100%
     );
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -204,7 +208,7 @@ nav ul li a:hover {
    WIKI BANNER
    ========================= */
 .wiki-banner {
-    margin-top: 4rem;
+    margin: 0rem;
     background: #111;
     padding: 3rem;
 }
@@ -220,6 +224,89 @@ footer.container {
 }
 
 /* =========================
+   PORTFOLIO INTRO
+   ========================= */
+.portfolio-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0;
+    text-align: left;
+
+    width: 100%;
+    padding: 3rem 2rem;
+    background: linear-gradient(
+            90deg,
+            rgba(78, 42, 26, 0.25) 0%,
+            rgba(129, 71, 33, 0.25) 50%,
+            rgba(187, 99, 39, 0.25) 100%
+    );
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.portfolio-intro .intro-text {
+    flex: 1;
+}
+.portfolio-intro .intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.portfolio-intro .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   PORTFOLIO 3D INTRO
+   ========================= */
+.portfolio-3d {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0;
+    text-align: left;
+
+    width: 100%;
+    padding: 3rem 2rem;
+    background: linear-gradient(
+            90deg,
+            rgba(44, 62, 80, 0.3) 0%,
+            rgba(52, 152, 219, 0.25) 50%,
+            rgba(155, 89, 182, 0.25) 100%
+    );
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.portfolio-3d .intro-text {
+    flex: 1;
+    max-width: 600px;
+}
+.portfolio-3d .intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.portfolio-3d .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 900px) {
@@ -231,5 +318,14 @@ footer.container {
     }
     .nav-right {
         order: 2;
+    }
+    .portfolio-intro,
+    .portfolio-3d {
+        flex-direction: column;
+        text-align: center;
+    }
+    .portfolio-intro .intro-text,
+    .portfolio-3d .intro-text {
+        text-align: center;
     }
 }
